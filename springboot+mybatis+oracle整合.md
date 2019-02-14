@@ -29,13 +29,13 @@
 ```
 ##### 2.1.2 STS工具中配置
 1.  打开STS（ Spring Tool Suite）导航栏 `Window`-->`Preferences`-->`Maven`-->`Installations`如下图
-![maven1](.\img\maven1.png)
+![maven1](./img/maven1.png)
 										**图1**
-![maven2](.\img\maven2.png)
+![maven2](./img/maven2.png)
 										**图2**
 ***配置完成后就STS就使用我们自己下载的 maven*** 如**图1**所示勾选的就是我们自己下载的maven
 2.  接着配置maven的配置文件`settings.xml`。让开发工具STS知道maven的具体配置，主要是我们前面配置的**本地仓库**，**在线镜像地址**。这样开发工具知道去哪个镜像下载*jar*包，然后存储到本地的什么地方。如下图所示
-![](.\img\maven3.png)
+![](./img/maven3.png)
 最后点击`Apply and Close`配置生效。
 
 # 二. springboot+mybatis
@@ -44,11 +44,11 @@
 
 打开STS `file`-->`new`-->`spring starter project`
 
-![](.\img\sp1.png)
+![](./img/sp1.png)
 
 直接`Next`
 
-![](.\img\sp2.png)
+![](./img/sp2.png)
 
 选择springboot的版本，因为我们是一个web服务所以勾选web-->web.并且勾选SQL-->mybatis。实质上就是在maven的`pom.xml`中加入需要的依赖。最后点击`finish`。
 
@@ -150,7 +150,7 @@ spring.datasource.password=admin
 
 ### 4.1 目录结构如下
 
-![](.\img\mulu.png)
+![](./img/mulu.png)
 
 ### 4.2启动类`StartApp.java `(默认为项目名)
 
@@ -309,11 +309,11 @@ public class JsonUtil {
 
 ### 4.6 启动服务。查看效果。
 
-![](.\img\end.png)
+![](./img/end.png)
 
 打开浏览器输入`127.0.0.1/getAllUser`或者`localhost/getAllUser`。因为application.properties配置的端口是80，所以可以省略，加上像这样`127.0.0.1:80/getAllUser`也无妨。
 
-![](.\img\rst.png)
+![](./img/rst.png)
 
 
 

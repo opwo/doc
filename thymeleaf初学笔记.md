@@ -28,8 +28,8 @@ thymeleaf类似于jsp的模板引擎。结合springboot使用，解决前后端�
 
 |      | th:text=""                                                   | th:utext=""                                                  |
 | ---- | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| 区别 | 不会解析HTML标签；${hello<h1>exp<h1>}输出`hello<h1>exp<h1>`  | 会解析HTML标签：输出`helloexp`                               |
-|      | [[]]功能和th:text=""相同。区别是th:text=""标签内使用，[[]]标签外使用：如`<a>[[${hello}]]</a>` | [()]功能和th:utext=""相同。区别是th:utext=""标签内使用，[()]标签外使用 |
+| 区别 | 不会解析HTML标签；`${hello<h1>exp<h1>}`输出`hello<h1>exp<h1>` | 会解析HTML标签：输出`helloexp`                               |
+|      | `[[]]`功能和`th:text=""`相同。区别是`th:text=""`标签内使用，`[[]]`标签外使用：如`<a>[[${hello}]]</a>` | `[()]`功能和`th:utext=""`相同。区别是`th:utext=""`标签内使用，`[()]`标签外使用 |
 
 *例子*
 
@@ -50,11 +50,11 @@ thymeleaf类似于jsp的模板引擎。结合springboot使用，解决前后端�
 
 ###常用表达式
 
-|        标签        |                  作用                   | 使用举例说明                                                 |
-| :----------------: | :-------------------------------------: | ------------------------------------------------------------ |
-|     ${example}     | 一般用于获得`变量值相关`。如example的值 | `<p th:text="${example}">value</p>` 说明：如果example存在并且有值，那么便会替代value。 |
-| @{/assets/exp.css} | 一般用于链接**地址**，或请求地址使用。  | 1.引入静态资源的地址：`<img th:src="@{/assets/img/img.png}"/>`。其他样式表，脚本等类似。2. 发送请求地址使用：`<form th:action="@{/deleteUser/1001}">` |
-| ~{Commons::topbar} |  片段表达式。一般用于引入一段代码片段   | 引入每个页面都需要的导航栏：有一个Commons.html里面包含一个导航栏代码片`<nav th:fragment="topbar"></nav>`。当我们需要引入这一个导航栏代码时，只需要在需要引入的位置使用`<div th:replace="~{commons::topbar}"></div>`引入就好了。语法规则：commons是Commons.html的名字，省略`.html`后缀。代表从哪个模板里边获取。topbar即这个模板底下使用`th:fragment`属性命名的标识。 |
+|         标签         |                  作用                   | 使用举例说明                                                 |
+| :------------------: | :-------------------------------------: | ------------------------------------------------------------ |
+|     `${example}`     | 一般用于获得`变量值相关`。如example的值 | `<p th:text="${example}">value</p>` 说明：如果example存在并且有值，那么便会替代value。 |
+| `@{/assets/exp.css}` | 一般用于链接**地址**，或请求地址使用。  | 1.引入静态资源的地址：`<img th:src="@{/assets/img/img.png}"/>`。其他样式表，脚本等类似。2. 发送请求地址使用：`<form th:action="@{/deleteUser/1001}">` |
+| `~{Commons::topbar}` |  片段表达式。一般用于引入一段代码片段   | 引入每个页面都需要的导航栏：有一个Commons.html里面包含一个导航栏代码片`<nav th:fragment="topbar"></nav>`。当我们需要引入这一个导航栏代码时，只需要在需要引入的位置使用`<div th:replace="~{commons::topbar}"></div>`引入就好了。语法规则：commons是Commons.html的名字，省略`.html`后缀。代表从哪个模板里边获取。topbar即这个模板底下使用`th:fragment`属性命名的标识。 |
 
 ##实用例子
 
@@ -125,7 +125,7 @@ thymeleaf类似于jsp的模板引擎。结合springboot使用，解决前后端�
 </html>
 ```
 
-![](.\img\thymeleaf_bar.png)
+![](./img/thymeleaf_bar.png)
 
 > 假设我们要引入templates/commons/bar.html里面的一个公共片段，且公共片段用`th:fragment`命名。假设为topbar。
 >
@@ -144,7 +144,7 @@ thymeleaf类似于jsp的模板引擎。结合springboot使用，解决前后端�
 
 一个员工列表，每个员工含一个删除按钮且有每个员工的ID。点击删除按钮，发起submit表单提交请求`@{/user/}+${user.id}`。调用JS执行操作。
 
-![](.\img\userlist.png)
+![](./img/userlist.png)
 
 1. 给button按钮的class属性添加一个类名`deleteBtn`。用于jQuery获取：`$(".deleteBtn")`
 
