@@ -43,3 +43,7 @@ ssh-keygen -t rsa -C "youremail@example.com" #邮箱是注册GitHub的邮箱
 ![](./img/ssh1.png)
 
 ![](./img/githubssh.png)
+
+# 删除本地存储的账户密码
+
+`控制面板`-->`用户账户`-->`凭据管理器`-->`管理Windows凭据` 找到git相关的就可以删除了
