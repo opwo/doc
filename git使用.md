@@ -26,6 +26,12 @@ git commit -m "第一次提交"
 git remote add shortname https://github.com/opwo/doc.git 
 ```
 
+# 取回远程仓库的变化，并与本地分支合并
+
+ ``` sh
+git pull [remote] [branch]
+ ```
+
 
 
 
