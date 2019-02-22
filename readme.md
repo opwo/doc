@@ -26,9 +26,9 @@ wangying 前端 930126069@qq.com
 
 ```
 
-git config --global user.name "yourusername"
+git config --global user.name "yourusername"// 自己写名字
 
-git config --global user.email "youremail@xx.xxx"
+git config --global user.email "youremail@xx.xxx"//github注册邮箱
 
 ```
 
@@ -36,7 +36,7 @@ git config --global user.email "youremail@xx.xxx"
 
 ```
 
-ssh-keygen -t rsa -C "youremail@xx.xxx"
+ssh-keygen -t rsa -C "youremail@xx.xxx"//github注册邮箱
 
 ```
 
@@ -67,11 +67,11 @@ git init
 
 3 配置git用户名（告诉是谁在用这个库）
 ```
-git config --global user.email "orange_register@163.com"
-git config --global user.name "zhu ling"
+git config --global user.email "XXX"//github注册邮箱
+git config --global user.name "XXX"// 自己写名字
 ```
 
-4 到github查找项目地址
+4 到github查找项目地址（SSH对应的git地址需要登陆后查看）
 5 下载.git到目标文件夹
 ```
 git clone https://github.com/opencv/opencv.git
@@ -82,7 +82,7 @@ git pull https://github.com/opencv/opencv.git
 ```
 #### 网上新建项目，将自己已写好的文件上传到新建项目（新建项目没有内容）
 1-3步不变
-4 github中新建项目
+4 github中新建项目并查看git地址
 5 git文件中添加分支
 ```
 git remote add origin git@code.aliyun.com:orange4code/stitching.git
