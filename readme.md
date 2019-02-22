@@ -8,12 +8,12 @@
 * 数据库
 
 # 成员及分工
-opwo 后端 657835775@qq.com
-Doraengineer 数据处理分析 orange_working@163.com
-HZJack 数据库 747386797@qq.com
-wangying 前端 930126069@qq.com
+* opwo 后端 657835775@qq.com
+* Doraengineer 数据处理分析 orange_working@163.com
+* HZJack 数据库 747386797@qq.com
+* wangying 前端 930126069@qq.com
 ----------
-#项目维护指南
+# 项目维护指南
 ## github简述
 [git笔记](https://blog.csdn.net/weixin_42641395/article/details/82429899)
 ## github使用
@@ -87,7 +87,7 @@ git pull https://github.com/opencv/opencv.git
 ```
 git remote add origin git@code.aliyun.com:orange4code/stitching.git
 ```
-###文件修改上传
+### 文件修改上传
 1.进入下载下来的仓库文件夹进行修改，添加到缓存区（缓存区，可以多次add，最后在commit)，缓存区相关数据在.git文件中
 ```
 git add .
