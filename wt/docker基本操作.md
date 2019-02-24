@@ -1,5 +1,16 @@
 # docker命令
 
+## 启动docker
+
+```sh
+#centos7为例
+systemctl start docker
+#关闭docker
+systemctl stop docker
+#系统下次开机自动启动
+systemctl enable docker
+```
+
 ## 搜索镜像
 
 ```sh
@@ -77,6 +88,14 @@ docker logs container-name/container-id
 #先下载镜像 
 docker pull mysql
 #运行
-docker run -p 3306:3306 --name mysql001 -e MYSQL_ROOT_PASSWORD=123456 -d mysql
+docker run -p 3306:3306 --name mysql01 -e MYSQL_ROOT_PASSWORD=123456 -d mysql
+```
+
+## 号外
+
+```sh
+#linux防火墙相关
+service firewalld status #查看防火墙状态
+service firewalld stop #关闭防火墙
 ```
 

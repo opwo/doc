@@ -16,6 +16,7 @@
 # 项目维护指南
 ## github简述
 [git笔记](https://blog.csdn.net/weixin_42641395/article/details/82429899)
+
 ## github使用
 ### 准备工作
 1 fork仓库（fork的仓库只在本地，不会随原仓库更新而更新）
@@ -61,43 +62,45 @@ github :头像旁边settings->SSH and GPG keys 将key全部复制进去
 1 右键，git bash
 2 进入新建文件夹创建库
 
-```
+```sh
 git init
 ```
 
 3 配置git用户名（告诉是谁在用这个库）
-```
+```sh
 git config --global user.email "XXX"//github注册邮箱
 git config --global user.name "XXX"// 自己写名字
 ```
 
 4 到github查找项目地址（SSH对应的git地址需要登陆后查看）
 5 下载.git到目标文件夹
-```
+
+```sh
 git clone https://github.com/opencv/opencv.git
 ```
 或者
-```
+```sh
 git pull https://github.com/opencv/opencv.git
 ```
 #### 网上新建项目，将自己已写好的文件上传到新建项目（新建项目没有内容）
 1-3步不变
 4 github中新建项目并查看git地址
 5 git文件中添加分支
-```
+```sh
 git remote add origin git@code.aliyun.com:orange4code/stitching.git
 ```
 ### 文件修改上传
 1.进入下载下来的仓库文件夹进行修改，添加到缓存区（缓存区，可以多次add，最后在commit)，缓存区相关数据在.git文件中
-```
+```sh
 git add .
 ```
 2.正式递交到分支头部
-```
+```sh
 git commit -m '第一 次提交代码'
 ```
 3.上传到project
-```
+
+```sh
 git push orgin master
 ```
 ### 请求合并分支（将fork的项目分支合并到主分支上）
